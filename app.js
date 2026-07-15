@@ -1191,6 +1191,10 @@ function setupPhotoUploader(config) {
     }
 
     function addFiles(files) {
+        if (files.length > 10 || getPhotos().length + files.length > 10) {
+            showToast("You can only upload a maximum of 10 photos.");
+            return;
+        }
         Array.from(files).forEach(file => {
             if (!file.type.startsWith('image/')) return;
             const reader = new FileReader();
