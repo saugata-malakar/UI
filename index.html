@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefectSpec — Structural Defect Diagnostics</title>
+    <meta name="description" content="Professional structural defect classification and diagnostic tool for pre-construction and post-construction analysis.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+    <!-- ══════════ HEADER ══════════ -->
+    <header class="app-header" id="appHeader">
+        <div class="header-inner">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">DefectSpec</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="edition-tag">Engineering Suite v2.0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════ APP SHELL ══════════ -->
+    <div class="app-shell">
+
+        <!-- ══════════ SIDEBAR ══════════ -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <!-- Workmanship Check Section -->
+                <div class="nav-section">
+                    <button class="nav-section-header" id="navWCToggle">
+                        <div class="nav-section-left">
+                            <div class="nav-section-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span>Workmanship Check</span>
+                        </div>
+                        <svg class="nav-chevron" id="navWCChevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="nav-sub-items" id="navWCItems">
+                        <button class="nav-sub-item active" data-page="pre" id="navPre">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                            <span>Pre-Construction</span>
+                        </button>
+                        <button class="nav-sub-item" data-page="post" id="navPost">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="9" y1="3" x2="9" y2="21"/>
+                            </svg>
+                            <span>Post-Construction</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RCC Damage Analyzer Section -->
+                <div class="nav-section">
+                    <button class="nav-sub-item" data-page="rcc" id="navRCC" style="padding-left: 12px; height: 50px;">
+                        <div class="nav-section-icon" style="background: rgba(20, 184, 166, 0.15); color: var(--teal-500); width: 30px; height: 30px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="9" y1="3" x2="9" y2="21"/>
+                                <line x1="15" y1="3" x2="15" y2="21"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="3" y1="15" x2="21" y2="15"/>
+                            </svg>
+                        </div>
+                        <span style="font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; color: var(--sb-text-bright);">Defect Analyzer</span>
+                    </button>
+                </div>
+
+                <!-- Interpretation Setting Section -->
+                <div class="nav-section">
+                    <button class="nav-sub-item" data-page="settings" id="navSettings" style="padding-left: 12px; height: 50px;">
+                        <div class="nav-section-icon" style="background: rgba(99, 102, 241, 0.15); color: var(--indigo-500); width: 30px; height: 30px; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 10px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <span style="font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; color: var(--sb-text-bright);">Interpretation Setting</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div class="sidebar-badges">
+                    <span>IS 456</span>
+                    <span>ACI 318</span>
+                    <span>EC2</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ══════════ CONTENT PANEL ══════════ -->
+        <main class="content-panel" id="contentPanel">
+
+            <!-- ═══ PRE-CONSTRUCTION PAGE ═══ -->
+            <div class="page active" id="pagePre">
+                <div class="page-header">
+                    <div class="page-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        Pre-Construction Audit
+                    </div>
+                    <h1>Reinforcement &amp; Formwork<br><span class="gradient-text">Workmanship Check</span></h1>
+                    <p class="page-desc">Upload site photographs, specify construction parameters, and receive AI-powered dual diagnostic reports.</p>
+                </div>
+
+                <!-- Photo Upload Section -->
+                <section class="card" id="preUploadCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head">
+                        <div class="step-indicator"><span class="si-number">01</span><span class="si-line"></span></div>
+                        <div class="card-title-block">
+                            <h2>Upload Site Photographs</h2>
+                            <p>Add at least 1 photo, up to 10+ images for comprehensive analysis. (You can upload 10 photos at once)</p>
+                        </div>
+                        <div class="photo-count" id="prePhotoCount">0 photos</div>
+                    </div>
+                    <div class="photo-grid" id="prePhotoGrid">
+                        <!-- Photo thumbnails will be injected here -->
+                        <div class="photo-add-btn" id="preAddBtn" title="Add photo">
+                            <input type="file" id="preFileInput" accept="image/*" multiple style="display:none;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <span>Add Photos</span>
+                        </div>
+                    </div>
+                    <!-- Drop overlay -->
+                    <div class="drop-overlay hidden" id="preDropOverlay">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        <span>Drop images here</span>
+                    </div>
+                    <div class="action-bar" style="margin-top:20px; padding-top:15px;">
+                        <button class="btn-analyze btn-analyze-teal" id="preGoToAnalysisBtn" disabled>
+                            <span class="btn-text">Proceed to Analysis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Parameters Section -->
+                <section class="card locked hidden" id="preParamCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number">02</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Pre-Construction Parameters</h2>
+                                <p>Verify AI parameters or select reinforcement options photo by photo</p>
+                            </div>
+                        </div>
+                        <button class="fb-btn" id="preBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                    </div>
+
+                    <!-- Search & Sort Filters -->
+                    <div class="controls-bar" style="display:flex; gap:16px; align-items:center; margin-bottom:20px; background:#fff; padding:16px; border:1px solid var(--border); border-radius:var(--r-lg);">
+                        <div style="flex:1; position:relative; display:flex; align-items:center;">
+                            <svg style="position:absolute; left:12px; color:var(--text-400); pointer-events:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="preSearchInput" class="manual-input" placeholder="Search by photo #, parameter or status..." style="padding-left:36px; margin:0;">
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; width:220px; flex-shrink:0;">
+                            <span style="font-size:0.75rem; font-weight:700; color:var(--text-500); white-space:nowrap;">Sort by:</span>
+                            <select id="preSortSelect" class="styled-select" style="margin:0;">
+                                <option value="number">Photo Number</option>
+                                <option value="confidence">AI Confidence</option>
+                                <option value="classification">Classification</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Photo List with Horizontal parameter selectors -->
+                    <div class="pre-analysis-list" id="preAnalysisList" style="display:flex; flex-direction:column; gap:20px; margin-bottom:24px;">
+                        <!-- Injected dynamically: image on left, AI recommendation and manual parameter override fields on right -->
+                    </div>
+
+                    <div class="action-bar" style="display:flex; gap:12px; justify-content:flex-end;">
+                        <button class="fb-btn" id="preBackBtn" style="padding:11px 24px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                        <button class="btn-analyze btn-analyze-teal" id="preAnalyzeBtn">
+                            <span class="btn-text">Run Diagnostic Analysis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="card hidden" id="preResultsCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number">03</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Diagnostics &amp; Compliance Report</h2>
+                                <p>Review compliance analysis and select preferred mitigation options for each member</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items:center;">
+                            <div class="status-chip"><span class="status-dot"></span> Compliance Compiled</div>
+                            <button class="fb-btn" id="preResultsBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Parameters</button>
+                        </div>
+                    </div>
+
+                    <div class="solutions-report-list" id="preSolutionsReportList" style="display:flex; flex-direction:column; gap:24px;">
+                        <!-- Injected dynamically: report blocks with A vs B remediation cards -->
+                    </div>
+
+                    <div class="action-bar" style="margin-top:30px; padding-top:15px; display:flex; gap:12px; justify-content:flex-start;">
+                        <button class="fb-btn" id="preResultsBackBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Parameters</button>
+                        <button class="fb-btn" id="preRestartBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Start New Analysis</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ═══ POST-CONSTRUCTION PAGE ═══ -->
+            <div class="page" id="pagePost">
+                <div class="page-header">
+                    <div class="page-badge page-badge-teal">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                        Post-Construction Inspection
+                    </div>
+                    <h1><span class="gradient-text-teal">Defect Diagnostics</span></h1>
+                    <p class="page-desc">Upload inspection photographs, select the observed defect type, and receive dual diagnostic reports.</p>
+                </div>
+
+                <!-- Photo Upload Section -->
+                <section class="card" id="postUploadCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head">
+                        <div class="step-indicator"><span class="si-number si-teal">01</span><span class="si-line"></span></div>
+                        <div class="card-title-block">
+                            <h2>Upload Inspection Photographs</h2>
+                            <p>Add at least 1 photo, up to 10+ images of the observed defect. (You can upload 10 photos at once)</p>
+                        </div>
+                        <div class="photo-count" id="postPhotoCount">0 photos</div>
+                    </div>
+                    <div class="photo-grid" id="postPhotoGrid">
+                        <div class="photo-add-btn" id="postAddBtn" title="Add photo">
+                            <input type="file" id="postFileInput" accept="image/*" multiple style="display:none;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <span>Add Photos</span>
+                        </div>
+                    </div>
+                    <div class="drop-overlay hidden" id="postDropOverlay">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        <span>Drop images here</span>
+                    </div>
+                    <div class="action-bar" style="margin-top:20px; padding-top:15px;">
+                        <button class="btn-analyze btn-analyze-teal" id="postGoToAnalysisBtn" disabled>
+                            <span class="btn-text">Proceed to Analysis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Defect Selection -->
+                <section class="card locked hidden" id="postDefectCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number si-teal">02</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Post-Construction Classification</h2>
+                                <p>Verify AI defect predictions or select observed defects photo by photo</p>
+                            </div>
+                        </div>
+                        <button class="fb-btn" id="postBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                    </div>
+
+                    <!-- Search & Sort Filters -->
+                    <div class="controls-bar" style="display:flex; gap:16px; align-items:center; margin-bottom:20px; background:#fff; padding:16px; border:1px solid var(--border); border-radius:var(--r-lg);">
+                        <div style="flex:1; position:relative; display:flex; align-items:center;">
+                            <svg style="position:absolute; left:12px; color:var(--text-400); pointer-events:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="postSearchInput" class="manual-input" placeholder="Search by photo #, classification or source..." style="padding-left:36px; margin:0;">
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; width:220px; flex-shrink:0;">
+                            <span style="font-size:0.75rem; font-weight:700; color:var(--text-500); white-space:nowrap;">Sort by:</span>
+                            <select id="postSortSelect" class="styled-select" style="margin:0;">
+                                <option value="number">Photo Number</option>
+                                <option value="confidence">AI Confidence</option>
+                                <option value="classification">Classification</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Photo List with Horizontal selectors -->
+                    <div class="post-analysis-list" id="postAnalysisList" style="display:flex; flex-direction:column; gap:20px; margin-bottom:24px;">
+                        <!-- Injected dynamically: image on left, AI recommendation and manual selector dropdown on right -->
+                    </div>
+
+                    <div class="action-bar" style="display:flex; gap:12px; justify-content:flex-end;">
+                        <button class="fb-btn" id="postBackBtn" style="padding:11px 24px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                        <button class="btn-analyze btn-analyze-teal" id="postAnalyzeBtn">
+                            <span class="btn-text">Generate Solutions &amp; Reports <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="card hidden" id="postResultsCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number si-teal">03</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Solutions &amp; Remediation Plan</h2>
+                                <p>Review engineering diagnostics, risk assessments, and repair directives for each defect type</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items:center;">
+                            <div class="status-chip"><span class="status-dot"></span> Compliance Compiled</div>
+                            <button class="fb-btn" id="postResultsBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Classification</button>
+                        </div>
+                    </div>
+
+                    <div class="solutions-report-list" id="postSolutionsReportList" style="display:flex; flex-direction:column; gap:24px;">
+                        <!-- Groups of solutions + images injected here -->
+                    </div>
+
+                    <div class="action-bar" style="margin-top:30px; padding-top:15px; display:flex; gap:12px; justify-content:flex-start;">
+                        <button class="fb-btn" id="postResultsBackBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Classification</button>
+                        <button class="fb-btn" id="postRestartBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Start New Analysis</button>
+                    </div>
+                </section>
+            </div>
+<!-- ════ DEFECT ANALYZER PAGE ════ -->
+            <div class="page" id="pageRCC">
+                <div class="page-header">
+                    <div class="ph-subtitle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        Defect Analyzer
+                    </div>
+                    <h1>Defects &amp; Cracks<br><span class="gradient-text-teal">Diagnostic Suite</span></h1>
+                    <p class="page-desc">Upload concrete crack or surface defect photographs to get real-time AI classification and market rate remediation planning.</p>
+                </div>
+
+                <!-- Step 1: Photo Upload Section -->
+                <section class="card" id="rccUploadCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head">
+                        <div class="step-indicator"><span class="si-number si-teal">01</span><span class="si-line"></span></div>
+                        <div class="card-title-block">
+                            <h2>Upload Inspection Photographs</h2>
+                            <p>Verify AI image based prediction or select observed defect manually photo by photo. (You can upload 10 photos at once)</p>
+                        </div>
+                        <div class="photo-count" id="rccPhotoCount">0 photos</div>
+                    </div>
+                    <div class="photo-grid" id="rccPhotoGrid">
+                        <div class="photo-add-btn" id="rccAddBtn" title="Add photo">
+                            <input type="file" id="rccFileInput" accept="image/*" multiple style="display:none;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <span>Add Photos</span>
+                        </div>
+                    </div>
+                    <div class="drop-overlay hidden" id="rccDropOverlay">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        <span>Drop images here</span>
+                    </div>
+                    <div class="action-bar" style="margin-top:20px; padding-top:15px;">
+                        <button class="btn-analyze btn-analyze-teal" id="rccGoToAnalysisBtn" disabled>
+                            <span class="btn-text">Proceed to Analysis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 2: Analysis & Selection (AI vs Manual) -->
+                <section class="card hidden" id="rccAnalysisCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number si-teal">02</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Defect Classification</h2>
+                                <p>Verify AI predictions or select observed crack types photo by photo</p>
+                            </div>
+                        </div>
+                        <button class="fb-btn" id="rccBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                    </div>
+
+                    <!-- Search & Sort Filters -->
+                    <div class="controls-bar" style="display:flex; gap:16px; align-items:center; margin-bottom:20px; background:#fff; padding:16px; border:1px solid var(--border); border-radius:var(--r-lg);">
+                        <div style="flex:1; position:relative; display:flex; align-items:center;">
+                            <svg style="position:absolute; left:12px; color:var(--text-400); pointer-events:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="rccSearchInput" class="manual-input" placeholder="Search by photo #, classification or source..." style="padding-left:36px; margin:0;">
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; width:220px; flex-shrink:0;">
+                            <span style="font-size:0.75rem; font-weight:700; color:var(--text-500); white-space:nowrap;">Sort by:</span>
+                            <select id="rccSortSelect" class="styled-select" style="margin:0;">
+                                <option value="number">Photo Number</option>
+                                <option value="confidence">AI Confidence</option>
+                                <option value="classification">Classification</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Photo List with Horizontal selectors -->
+                    <div class="rcc-analysis-list" id="rccAnalysisList" style="display:flex; flex-direction:column; gap:20px; margin-bottom:24px;">
+                        <!-- Injected dynamically: image on left, AI recommendation and manual selector dropdown on right -->
+                    </div>
+
+                    <!-- Control Buttons -->
+                    <div class="action-bar" style="display:flex; gap:12px; justify-content:flex-end;">
+                        <button class="fb-btn" id="rccBackToUpload" style="padding:11px 24px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+                        <button class="btn-analyze btn-analyze-teal" id="rccGenerateSolutionsBtn">
+                            <span class="btn-text">Generate Solutions &amp; Reports <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Step 3: Solutions Section -->
+                <section class="card hidden" id="rccResultsCard">
+                    <div class="card-glow"></div>
+                    <div class="card-head" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="display:flex; gap:16px; align-items:center;">
+                            <div class="step-indicator"><span class="si-number si-teal">03</span><span class="si-line"></span></div>
+                            <div class="card-title-block">
+                                <h2>Solutions &amp; Remediation Plan</h2>
+                                <p>Review engineering diagnostics, risk assessments, and repair directives for each crack type</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items:center;">
+                            <div class="status-chip"><span class="status-dot"></span> Compliance Compiled</div>
+                            <button class="fb-btn" id="rccResultsBackBtnTop" style="padding:8px 16px; font-size:0.8rem; margin:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Analysis</button>
+                        </div>
+                    </div>
+
+                    <div class="solutions-report-list" id="rccSolutionsReportList" style="display:flex; flex-direction:column; gap:24px;">
+                        <!-- Groups of solutions + images injected here -->
+                    </div>
+
+                    <div class="action-bar" style="margin-top:30px; padding-top:15px; display:flex; gap:12px; justify-content:flex-start;">
+                        <button class="fb-btn" id="rccResultsBackBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Analysis</button>
+                        <button class="fb-btn" id="rccRestartBtn" style="padding:10px 20px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg> Start New Analysis</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ════ INTERPRETATION SETTING PAGE ════ -->
+            <div class="page" id="pageSettings">
+                <div class="page-header">
+                    <div class="ph-subtitle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        Interpretation Setting
+                    </div>
+                    <h1>AI Model<br><span class="gradient-text-teal">Interpretation Settings</span></h1>
+                    <p class="page-desc">Full defect pattern database with root cause analysis, investigation requirements, and future solution directives.</p>
+                </div>
+
+                <section class="card" style="padding:24px;">
+                    <div class="card-glow"></div>
+                    
+                    <!-- Card Header with Title + Add Button -->
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:16px; margin-bottom:20px;">
+                        <h2 style="margin:0; font-family:var(--font-head); font-weight:800; font-size:1.2rem; color:var(--text-900);">Defect Pattern Database</h2>
+                        <button class="fb-btn" id="addSettingsDefectBtn" style="padding:7px 14px; font-size:0.78rem; background:var(--teal-500); color:#fff; border:none; display:flex; align-items:center; gap:6px; cursor:pointer;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            Add Defect
+                        </button>
+                    </div>
+
+                    <!-- Defect Type Dropdown Selector -->
+                    <div style="margin-bottom:20px;">
+                        <label style="display:block; font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.04em; margin-bottom:8px; font-family:var(--font-head);">Select Defect Type</label>
+                        <select id="settingsDefectDropdown" style="width:100%; max-width:500px; padding:12px 14px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.88rem; color:var(--text-800); outline:none; font-family:var(--font-body); background:#fff; cursor:pointer; transition:all 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow:0 1px 3px rgba(0,0,0,0.04); appearance:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%2394a3b8\" stroke-width=\"2.5\"><polyline points=\"6 9 12 15 18 9\"/></svg>'); background-repeat:no-repeat; background-position:right 14px center;" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1), 0 2px 8px rgba(13,148,136,0.08)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'">
+                            <option value="">— Show All Defect Patterns —</option>
+                            <!-- Populated dynamically by app.js -->
+                        </select>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div style="margin-bottom:16px; position:relative;">
+                        <div style="position:relative; max-width:500px;">
+                            <svg id="settingsSearchIcon" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-400); pointer-events:none; transition:color 0.2s;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="settingsSearchInput" placeholder="Search across all columns &#8212; defect name, root cause, investigation, solution..." style="width:100%; padding:12px 14px 12px 40px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.85rem; color:var(--text-800); outline:none; font-family:var(--font-body); transition:all 0.3s cubic-bezier(0.4,0,0.2,1); background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.04);" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1), 0 2px 8px rgba(13,148,136,0.08)'; document.getElementById('settingsSearchIcon').style.color='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'; document.getElementById('settingsSearchIcon').style.color='var(--text-400)'">
+                        </div>
+                        <div id="settingsSearchResultCount" style="margin-top:6px; font-size:0.72rem; font-weight:700; color:var(--text-400); font-family:var(--font-head); letter-spacing:0.03em; display:none;"></div>
+                    </div>
+
+                    <!-- Full Defect Table -->
+                    <div id="settingsDefectTableContainer" style="overflow-x:auto; width:100%; border:1px solid var(--border); border-radius:var(--r-md); background:#fff; box-shadow:var(--shadow-sm);">
+                        <!-- Populated by app.js -->
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-icon" id="toastIcon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span id="toastMsg"></span>
+    </div>
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <script src="app.js?v=11"></script>
+</body>
+</html>
