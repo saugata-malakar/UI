@@ -778,7 +778,7 @@ window.getMarketRateTableHTML = function(mode, key) {
                     <tr style="background:#f8fafc; border-bottom:2px solid var(--border); font-family:var(--font-head); font-weight:800; font-size:0.75rem; color:var(--text-600); text-transform:uppercase;">
                         <th style="padding:12px; width:33%;">Root Cause</th>
                         <th style="padding:12px; width:33%;">Further Investigation</th>
-                        <th style="padding:12px; width:33%;">Future Solution</th>
+                        <th style="padding:12px; width:33%;">Possible Solution</th>
                         <th style="padding:12px; width:90px; text-align:center;">Action</th>
                     </tr>
                 </thead>
@@ -954,7 +954,7 @@ function renderQuotationModal(rc, fi, fs) {
                     <textarea id="modalFurtherInvestigation" style="width:100%; min-height:80px; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; resize:vertical; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'">${fi}</textarea>
                 </div>
                 <div style="display:flex; flex-direction:column; gap:6px;">
-                    <label style="font-size:0.75rem; font-weight:800; color:var(--text-600); text-transform:uppercase;">Future Solution</label>
+                    <label style="font-size:0.75rem; font-weight:800; color:var(--text-600); text-transform:uppercase;">Possible Solution</label>
                     <textarea id="modalFutureSolution" style="width:100%; min-height:80px; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; resize:vertical; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'">${fs}</textarea>
                 </div>
             </div>
@@ -1543,7 +1543,7 @@ function renderPreAnalysisList() {
         const source = item.source;
         let sourceBadgeHTML = '';
         if (source === 'ai') {
-            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI</span>`;
+            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI Interpretation</span>`;
         } else if (source === 'manual') {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
@@ -1604,7 +1604,7 @@ function renderPreAnalysisList() {
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                             <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--teal-600); letter-spacing:0.05em;">AI Recommendation</span>
-                            <span class="pre-badge-ai-${idx}" style="display:none; font-size:0.6rem; background:var(--teal-500); color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase;">[OK] Active</span>
+                            <span class="pre-badge-ai-${idx}" style="display:none;"></span>
                         </div>
                         <h4 style="font-family:var(--font-head); font-weight:800; font-size:0.85rem; color:var(--text-900); margin-bottom:4px;">${recLabel}</h4>
                         <div style="font-size:0.72rem; color:var(--text-500); line-height:1.4;">
@@ -1615,7 +1615,7 @@ function renderPreAnalysisList() {
                         </div>
                     </div>
                     <button class="fb-btn apply-pre-ai-btn-${idx}" style="margin-top:12px; padding:6px 12px; font-size:0.72rem; color:var(--teal-600); border-color:rgba(20,184,166,0.3); background:#fff; align-self:start;">
-                        Apply Recommendation
+                        Apply AI Recommendation
                     </button>
                 </div>
 
@@ -1623,7 +1623,7 @@ function renderPreAnalysisList() {
                 <div class="pre-box-manual-${idx}" style="border:2px solid transparent; border-radius:var(--r-md); padding:14px; display:flex; flex-direction:column; gap:8px; transition:all 0.2s ease-in-out; position:relative; background:#fff;">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
                         <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Manual Parameters</span>
-                        <span class="pre-badge-manual-${idx}" style="display:none; font-size:0.6rem; background:#6366f1; color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase;">[OK] Active Override</span>
+                        <span class="pre-badge-manual-${idx}" style="display:none;"></span>
                     </div>
                     
                     <div style="display:flex; flex-direction:column; gap:4px;">
@@ -1766,7 +1766,7 @@ function renderPostAnalysisList() {
         const source = item.source;
         let sourceBadgeHTML = '';
         if (source === 'ai') {
-            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI</span>`;
+            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI Interpretation</span>`;
         } else if (source === 'manual') {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
@@ -1810,13 +1810,13 @@ function renderPostAnalysisList() {
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                             <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--teal-600); letter-spacing:0.05em;">AI Recommendation</span>
-                            <span class="post-badge-ai-${idx}" style="display:none; font-size:0.6rem; background:var(--teal-500); color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase; margin-left:6px; white-space:nowrap;">[OK] Active</span>
+                            <span class="post-badge-ai-${idx}" style="display:none;"></span>
                         </div>
                         <h4 style="font-family:var(--font-head); font-weight:800; font-size:0.85rem; color:var(--text-900); margin-bottom:4px;">${recLabel}</h4>
                         <span style="font-size:0.75rem; color:var(--text-500); font-weight:600;">${recData.pct}% Match confidence</span>
                     </div>
                     <button class="fb-btn apply-post-ai-btn-${idx}" style="margin-top:12px; padding:6px 12px; font-size:0.72rem; color:var(--teal-600); border-color:rgba(20,184,166,0.3); background:#fff; align-self:start;">
-                        Apply Recommendation
+                        Apply AI Recommendation
                     </button>
                 </div>
 
@@ -1825,7 +1825,7 @@ function renderPostAnalysisList() {
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
                             <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Defect Classification Manually</span>
-                            <span class="post-badge-manual-${idx}" style="display:none; font-size:0.6rem; background:#6366f1; color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase;">[OK] Active Override</span>
+                            <span class="post-badge-manual-${idx}" style="display:none;"></span>
                         </div>
                         <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
                             ${selectHTML}
@@ -2223,7 +2223,7 @@ function renderRCCAnalysisList() {
         const source = item.source;
         let sourceBadgeHTML = '';
         if (source === 'ai') {
-            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI</span>`;
+            sourceBadgeHTML = `<span class="source-badge badge-ai" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#0d9488; background:rgba(20,184,166,0.1); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">AI Interpretation</span>`;
         } else if (source === 'manual') {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
@@ -2267,13 +2267,13 @@ function renderRCCAnalysisList() {
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                             <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--teal-600); letter-spacing:0.05em;">AI Recommendation</span>
-                            <span class="rcc-badge-ai-${idx}" style="display:none; font-size:0.6rem; background:var(--teal-500); color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase; margin-left:6px; white-space:nowrap;">[OK] Active</span>
+                            <span class="rcc-badge-ai-${idx}" style="display:none;"></span>
                         </div>
                         <h4 style="font-family:var(--font-head); font-weight:800; font-size:0.85rem; color:var(--text-900); margin-bottom:4px;">${recLabel}</h4>
                         <span style="font-size:0.75rem; color:var(--text-500); font-weight:600;">${recData.pct}% Match confidence</span>
                     </div>
                     <button class="fb-btn apply-rcc-ai-btn-${idx}" style="margin-top:12px; padding:6px 12px; font-size:0.72rem; color:var(--teal-600); border-color:rgba(20,184,166,0.3); background:#fff; align-self:start;">
-                        Apply Recommendation
+                        Apply AI Recommendation
                     </button>
                 </div>
 
@@ -2282,7 +2282,7 @@ function renderRCCAnalysisList() {
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
                             <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Defect Classification Manually</span>
-                            <span class="rcc-badge-manual-${idx}" style="display:none; font-size:0.6rem; background:#6366f1; color:#fff; font-weight:800; padding:2px 8px; border-radius:var(--r-full); text-transform:uppercase;">[OK] Active Override</span>
+                            <span class="rcc-badge-manual-${idx}" style="display:none;"></span>
                         </div>
                         <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
                             ${selectHTML}
@@ -2405,7 +2405,7 @@ function renderPreSolutionsReport() {
             if (assignedRiskKeys[idx] === key) {
                 const config = state.pre.imageAssignments[idx] || { coverBlocks: '4_blocks', reinfSpacing: '150mm', bars: '16mm', stirrups: '150mm_rigid' };
                 const isAI = (state.pre.selectionSource[idx] === 'ai');
-                const badgeText = isAI ? 'AI' : 'Manual';
+                const badgeText = isAI ? 'AI Interpretation' : 'Manual';
                 const badgeColor = isAI ? '#0d9488' : '#6366f1';
                 const badgeBg = isAI ? 'rgba(20,184,166,0.1)' : 'rgba(99,102,241,0.08)';
 
@@ -2445,7 +2445,7 @@ function renderPreSolutionsReport() {
 
             <div style="margin-top:18px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Future Solutions &amp; Market Rate Analysis</h4>
+                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Conclusive Remarks</h4>
                 </div>
                 ${getMarketRateTableHTML('pre', key)}
             </div>
@@ -2568,7 +2568,7 @@ function renderPostSolutionsReport() {
 
             <div style="margin-top:18px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Future Solutions &amp; Market Rate Analysis</h4>
+                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Conclusive Remarks</h4>
                 </div>
                 ${getMarketRateTableHTML('post', key)}
             </div>
@@ -2717,7 +2717,7 @@ function renderRCCSolutionsReport() {
 
             <div style="margin-top:18px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Future Solutions &amp; Market Rate Analysis</h4>
+                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Conclusive Remarks</h4>
                 </div>
                 ${getMarketRateTableHTML('rcc', key)}
             </div>
@@ -3012,7 +3012,7 @@ window.getDefectProgressBarsHTML = function(defectKey, isAI) {
         // Manual detection — single purple bar at 100%
         return `
             <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
-                <div style="font-family:var(--font-head); font-weight:800; font-size:0.65rem; text-transform:uppercase; color:#6366f1; letter-spacing:0.05em; margin-bottom:2px;">DEFECT PATTERN DETECTED MANUALLY BY EXPERT</div>
+                <div style="font-family:var(--font-head); font-weight:800; font-size:0.65rem; text-transform:uppercase; color:#6366f1; letter-spacing:0.05em; margin-bottom:2px;">DEFECT PATTERN DETECTED MANUALLY BY EXPERT (PROBABILITY)</div>
                 <div style="position:relative; width:100%; height:38px; border-radius:10px; overflow:hidden; background:#e8e5ff; box-shadow: inset 0 2px 4px rgba(99,102,241,0.15), 0 4px 12px rgba(99,102,241,0.12), 0 2px 4px rgba(99,102,241,0.06); border:1.5px solid #6366f1;">
                     <div style="position:absolute; top:0; left:0; height:100%; width:100%; background:linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #6366f1 100%); border-radius:8px; transition:width 0.8s cubic-bezier(0.4,0,0.2,1);">
                         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 60%, rgba(0,0,0,0.1) 100%); border-radius:8px;"></div>
@@ -3047,7 +3047,7 @@ window.getDefectProgressBarsHTML = function(defectKey, isAI) {
 
     return `
         <div style="flex:1; display:flex; flex-direction:column; gap:10px;">
-            <div style="font-family:var(--font-head); font-weight:800; font-size:0.65rem; text-transform:uppercase; color:#0d9488; letter-spacing:0.05em;">DEFECT PATTERN DETECTED BY TRAINED AI EXPERT</div>
+            <div style="font-family:var(--font-head); font-weight:800; font-size:0.65rem; text-transform:uppercase; color:#0d9488; letter-spacing:0.05em;">DEFECT PATTERN DETECTED BY TRAINED AI EXPERT (PROBABILITY)</div>
 
             <!-- Bar 1 -->
             <div style="display:flex; flex-direction:column; gap:3px;">
@@ -3237,7 +3237,7 @@ function initInterpretationSettingsPage() {
                         <th style="padding:12px 12px; border-right:1px solid var(--border); min-width:180px;">Defect Pattern</th>
                         <th style="padding:12px 12px; border-right:1px solid var(--border);">Root Cause</th>
                         <th style="padding:12px 12px; border-right:1px solid var(--border);">Further Investigation</th>
-                        <th style="padding:12px 12px; border-right:1px solid var(--border);">Future Solution</th>
+                        <th style="padding:12px 12px; border-right:1px solid var(--border);">Possible Solution</th>
                         <th style="padding:12px 8px; width:90px; text-align:center;">Actions</th>
                     </tr>
                 </thead>
@@ -3411,7 +3411,7 @@ function openAddSettingsDefectModal(renderCallback) {
                     <textarea id="modalNewDefectFurtherInvestigation" placeholder="Detail any surveys or investigations needed..." style="width:100%; min-height:80px; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; resize:vertical; transition:border-color 0.2s; font-family:var(--font-body);" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'"></textarea>
                 </div>
                 <div style="display:flex; flex-direction:column; gap:6px;">
-                    <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Future Solution</label>
+                    <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Possible Solution</label>
                     <textarea id="modalNewDefectFutureSolution" placeholder="Describe the engineering repair methodology..." style="width:100%; min-height:80px; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; resize:vertical; transition:border-color 0.2s; font-family:var(--font-body);" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'"></textarea>
                 </div>
             </div>
