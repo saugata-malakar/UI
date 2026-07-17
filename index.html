@@ -464,26 +464,37 @@
                         </button>
                     </div>
 
-                    <!-- Defect Type Dropdown Selector -->
-                    <div style="margin-bottom:20px;">
-                        <label style="display:block; font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.04em; margin-bottom:8px; font-family:var(--font-head);">Select Defect Type</label>
-                        <select id="settingsDefectDropdown" style="width:100%; max-width:500px; padding:12px 14px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.88rem; color:var(--text-800); outline:none; font-family:var(--font-body); background:#fff; cursor:pointer; transition:all 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow:0 1px 3px rgba(0,0,0,0.04); appearance:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%2394a3b8\" stroke-width=\"2.5\"><polyline points=\"6 9 12 15 18 9\"/></svg>'); background-repeat:no-repeat; background-position:right 14px center;" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1), 0 2px 8px rgba(13,148,136,0.08)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'">
-                            <option value="">— Show All Defect Patterns —</option>
-                            <!-- Populated dynamically by app.js -->
-                        </select>
-                    </div>
-
-                    <!-- Search Filter -->
-                    <div style="margin-bottom:16px; position:relative;">
-                        <div style="position:relative; max-width:500px;">
-                            <svg id="settingsSearchIcon" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-400); pointer-events:none; transition:color 0.2s;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                            <input type="text" id="settingsSearchInput" placeholder="Search across all columns &#8212; defect name, root cause, investigation, solution..." style="width:100%; padding:12px 14px 12px 40px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.85rem; color:var(--text-800); outline:none; font-family:var(--font-body); transition:all 0.3s cubic-bezier(0.4,0,0.2,1); background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.04);" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1), 0 2px 8px rgba(13,148,136,0.08)'; document.getElementById('settingsSearchIcon').style.color='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'; document.getElementById('settingsSearchIcon').style.color='var(--text-400)'">
+                    <!-- Toolbar: Dropdown + Search in one row -->
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px; flex-wrap:wrap;">
+                        <!-- Select Defect Type Dropdown -->
+                        <div style="position:relative; flex-shrink:0; min-width:240px;">
+                            <svg style="position:absolute; left:12px; top:50%; transform:translateY(-50%); pointer-events:none; color:#94a3b8;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 10h10M4 14h6"/></svg>
+                            <select id="settingsDefectDropdown" style="width:100%; padding:11px 36px 11px 34px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.85rem; color:var(--text-800); outline:none; font-family:var(--font-body); background:#fff; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%2394a3b8\" stroke-width=\"2.5\"><polyline points=\"6 9 12 15 18 9\"/></svg>'); background-repeat:no-repeat; background-position:right 12px center; box-shadow:0 1px 3px rgba(0,0,0,0.04); transition:border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'">
+                                <option value="">— Select Defect Type —</option>
+                                <option value="__all__">✓ Select All</option>
+                                <!-- Populated dynamically by app.js -->
+                            </select>
                         </div>
-                        <div id="settingsSearchResultCount" style="margin-top:6px; font-size:0.72rem; font-weight:700; color:var(--text-400); font-family:var(--font-head); letter-spacing:0.03em; display:none;"></div>
+
+                        <!-- Search bar -->
+                        <div style="position:relative; flex:1; min-width:220px;">
+                            <svg id="settingsSearchIcon" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-400); pointer-events:none; transition:color 0.2s;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="settingsSearchInput" placeholder="Search defect name, root cause, investigation, solution…" style="width:100%; padding:11px 14px 11px 40px; border:1.5px solid var(--border); border-radius:var(--r-lg, 12px); font-size:0.85rem; color:var(--text-800); outline:none; font-family:var(--font-body); background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.04); transition:border-color 0.2s, box-shadow 0.2s; box-sizing:border-box;" onfocus="this.style.borderColor='var(--teal-500)'; this.style.boxShadow='0 0 0 3px rgba(13,148,136,0.1)'; document.getElementById('settingsSearchIcon').style.color='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.04)'; document.getElementById('settingsSearchIcon').style.color='var(--text-400)'">
+                        </div>
                     </div>
 
-                    <!-- Full Defect Table -->
-                    <div id="settingsDefectTableContainer" style="overflow-x:auto; width:100%; border:1px solid var(--border); border-radius:var(--r-md); background:#fff; box-shadow:var(--shadow-sm);">
+                    <!-- Result count -->
+                    <div id="settingsSearchResultCount" style="margin-bottom:10px; font-size:0.72rem; font-weight:700; color:var(--text-400); font-family:var(--font-head); letter-spacing:0.03em; display:none;"></div>
+
+                    <!-- Empty state (shown by default until selection/search) -->
+                    <div id="settingsEmptyState" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:56px 24px; border:1.5px dashed var(--border); border-radius:var(--r-lg); background:#fafafa; text-align:center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5" style="margin-bottom:16px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <p style="margin:0 0 6px; font-family:var(--font-head); font-weight:700; font-size:0.95rem; color:var(--text-500);">No defect type selected</p>
+                        <p style="margin:0; font-size:0.8rem; color:var(--text-400);">Select a defect type from the dropdown or type in the search box to view patterns.</p>
+                    </div>
+
+                    <!-- Full Defect Table (hidden initially) -->
+                    <div id="settingsDefectTableContainer" style="overflow-x:auto; width:100%; border:1px solid var(--border); border-radius:var(--r-md); background:#fff; box-shadow:var(--shadow-sm); display:none;">
                         <!-- Populated by app.js -->
                     </div>
                 </section>

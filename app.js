@@ -1,10 +1,10 @@
 /* ==========================================================================
-   DEFECTSPEC v2.0 â€” SIDEBAR NAV + MULTI-PHOTO UPLOAD + DIAGNOSTICS
+   DEFECTSPEC v2.0 Ã¢â‚¬â€ SIDEBAR NAV + MULTI-PHOTO UPLOAD + DIAGNOSTICS
    ========================================================================== */
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // STATE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const state = {
     activePage: 'pre',
     pre: {
@@ -45,9 +45,9 @@ const state = {
     }
 };
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // PRE-CONSTRUCTION DIAGNOSTIC DATABASE (DYNAMIC)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const PRE_DIAG_DB = {
     low_cover_risk: {
         label: "Spacer Block & Corrosion Risks",
@@ -146,9 +146,9 @@ const PRE_DIAG_DB = {
     }
 };
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // POST-CONSTRUCTION DIAGNOSTIC DATABASE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const POST_DIAG = {
     seepage_rcc_no_corrosion: {
         label: "Seepage-moisture-waterproofing-no-corrosion",
@@ -802,9 +802,9 @@ const POST_DIAG = {
 
 const RCC_DIAG = POST_DIAG;
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // OPTION MANAGEMENT & MODAL LAYOUT
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 window.getDefectOptions = function(mode, key) {
     if (!state[mode].options) {
         state[mode].options = {};
@@ -1023,7 +1023,7 @@ function renderQuotationModal(rc, fi, fs) {
         <div style="background:#fff; border-radius:var(--r-xl); width:100%; max-width:600px; box-shadow:0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); overflow:hidden; border:1px solid var(--border); animation: modalFadeIn 0.25s ease-out;">
             <div style="padding:18px 24px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; background:#f8fafc;">
                 <h3 style="margin:0; font-family:var(--font-head); font-size:1.1rem; font-weight:800; color:var(--text-900);">Quotation Item Details</h3>
-                <button onclick="closeQuotationModal()" style="background:none; border:none; color:var(--text-400); cursor:pointer; font-size:1.5rem; display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; transition:background 0.2s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='none'">Ã—</button>
+                <button onclick="closeQuotationModal()" style="background:none; border:none; color:var(--text-400); cursor:pointer; font-size:1.5rem; display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; transition:background 0.2s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='none'">Ãƒâ€”</button>
             </div>
             <div style="padding:24px; display:flex; flex-direction:column; gap:16px;">
                 <div style="display:flex; flex-direction:column; gap:6px;">
@@ -1071,9 +1071,9 @@ function refreshSolutionsReport(mode) {
     document.head.appendChild(style);
 })();
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // PARAMETER ANALYSIS ENGINE
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 function analyzePreParams(params) {
     const { coverBlocks, reinfSpacing, bars, stirrups } = params;
     const coverCount = parseFloat(coverBlocks) || 0;
@@ -1126,9 +1126,9 @@ function randConf(range) {
     return range[0] + Math.floor(Math.random() * (range[1] - range[0] + 1));
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // DOM HELPERS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const $ = id => document.getElementById(id);
 
 function showToast(msg) {
@@ -1139,9 +1139,9 @@ function showToast(msg) {
     toast._t = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // SIDEBAR NAVIGATION
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const navPre      = $('navPre');
 const navPost     = $('navPost');
 const navRCC      = $('navRCC');
@@ -1213,9 +1213,9 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('open');
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // MULTI-PHOTO UPLOAD SYSTEM
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 function setupPhotoUploader(config) {
     const { mode, gridId, addBtnId, fileInputId, countId, uploadCardId, nextCardId, dropOverlayId } = config;
     const grid      = $(gridId);
@@ -1355,9 +1355,9 @@ $('postGoToAnalysisBtn').addEventListener('click', () => {
     renderPostAnalysisList();
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // PRE-CONSTRUCTION DIAGNOSTICS LOGIC (PHOTO-BY-PHOTO)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const preAnalysisList = $('preAnalysisList');
 const preAnalyzeBtn = $('preAnalyzeBtn');
 
@@ -1397,6 +1397,12 @@ const PRE_STIRRUP_OPTS = {
     "250mm_flexible": "250mm - Shuttering Flexible",
     "300mm_flexible": "300mm - Shuttering Flexible (Max.)"
 };
+
+// Helper: resolve a display label from an options map (supports both key lookups and raw user-typed text)
+function resolveLabel(optsMap, value) {
+    if (!value) return '';
+    return optsMap[value] || value;
+}
 
 // Pre-Construction photo observer to trigger classification lists render
 const prePhotoObserver = new MutationObserver(() => {
@@ -1598,7 +1604,7 @@ function initPreRecommendations() {
     });
 }
 
-// No search input needed â€” single photo navigation
+// No search input needed Ã¢â‚¬â€ single photo navigation
 
 function renderPreAnalysisList() {
     preAnalysisList.innerHTML = '';
@@ -1629,29 +1635,13 @@ function renderPreAnalysisList() {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
 
-        let selectCoverHTML = `<select class="styled-select pre-cover-select-${idx}" style="flex:1;">`;
-        for (const [k, v] of Object.entries(PRE_COVER_OPTS)) {
-            selectCoverHTML += `<option value="${k}" ${config.coverBlocks === k ? 'selected' : ''}>${v}</option>`;
-        }
-        selectCoverHTML += `</select>`;
+        const inputCoverHTML = `<input type="text" class="styled-text-input pre-cover-input-${idx}" placeholder="e.g. 4 blocks/m2 - 600mm spacing" value="${resolveLabel(PRE_COVER_OPTS, config.coverBlocks)}" style="flex:1;">`;
 
-        let selectSpacingHTML = `<select class="styled-select pre-spacing-select-${idx}" style="flex:1;">`;
-        for (const [k, v] of Object.entries(PRE_SPACING_OPTS)) {
-            selectSpacingHTML += `<option value="${k}" ${config.reinfSpacing === k ? 'selected' : ''}>${v}</option>`;
-        }
-        selectSpacingHTML += `</select>`;
+        const inputSpacingHTML = `<input type="text" class="styled-text-input pre-spacing-input-${idx}" placeholder="e.g. 150mm c/c - Both ways" value="${resolveLabel(PRE_SPACING_OPTS, config.reinfSpacing)}" style="flex:1;">`;
 
-        let selectBarsHTML = `<select class="styled-select pre-bars-select-${idx}" style="flex:1;">`;
-        for (const [k, v] of Object.entries(PRE_BAR_OPTS)) {
-            selectBarsHTML += `<option value="${k}" ${config.bars === k ? 'selected' : ''}>${v}</option>`;
-        }
-        selectBarsHTML += `</select>`;
+        const inputBarsHTML = `<input type="text" class="styled-text-input pre-bars-input-${idx}" placeholder="e.g. 12 bars - 16mm dia (Fe 500)" value="${resolveLabel(PRE_BAR_OPTS, config.bars)}" style="flex:1;">`;
 
-        let selectStirrupsHTML = `<select class="styled-select pre-stirrups-select-${idx}" style="flex:1;">`;
-        for (const [k, v] of Object.entries(PRE_STIRRUP_OPTS)) {
-            selectStirrupsHTML += `<option value="${k}" ${config.stirrups === k ? 'selected' : ''}>${v}</option>`;
-        }
-        selectStirrupsHTML += `</select>`;
+        const inputStirrupsHTML = `<input type="text" class="styled-text-input pre-stirrups-input-${idx}" placeholder="e.g. 150mm - Shuttering Rigid (Standard)" value="${resolveLabel(PRE_STIRRUP_OPTS, config.stirrups)}" style="flex:1;">`;  
 
         const photoCard = document.createElement('div');
         photoCard.className = 'sort-item';
@@ -1689,10 +1679,10 @@ function renderPreAnalysisList() {
                         </div>
                         <h4 style="font-family:var(--font-head); font-weight:800; font-size:0.85rem; color:var(--text-900); margin-bottom:4px;">${recLabel}</h4>
                         <div style="font-size:0.72rem; color:var(--text-500); line-height:1.4;">
-                            - Cover: ${PRE_COVER_OPTS[rec.coverBlocks]}<br>
-                            - Spacing: ${PRE_SPACING_OPTS[rec.reinfSpacing]}<br>
-                            - Bars: ${PRE_BAR_OPTS[rec.bars]}<br>
-                            - Stirrups: ${PRE_STIRRUP_OPTS[rec.stirrups]}
+                            - Cover: ${resolveLabel(PRE_COVER_OPTS, rec.coverBlocks)}<br>
+                            - Spacing: ${resolveLabel(PRE_SPACING_OPTS, rec.reinfSpacing)}<br>
+                            - Bars: ${resolveLabel(PRE_BAR_OPTS, rec.bars)}<br>
+                            - Stirrups: ${resolveLabel(PRE_STIRRUP_OPTS, rec.stirrups)}
                         </div>
                     </div>
                     <button class="fb-btn apply-pre-ai-btn-${idx}" style="margin-top:12px; padding:6px 12px; font-size:0.72rem; color:var(--teal-600); border-color:rgba(20,184,166,0.3); background:#fff; align-self:start;">
@@ -1709,19 +1699,23 @@ function renderPreAnalysisList() {
                     
                     <div style="display:flex; flex-direction:column; gap:4px;">
                         <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Cover Blocks</span>
-                        ${selectCoverHTML}
+                        ${inputCoverHTML}
                     </div>
                     <div style="display:flex; flex-direction:column; gap:4px;">
                         <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Reinforcement Spacing</span>
-                        ${selectSpacingHTML}
+                        ${inputSpacingHTML}
                     </div>
                     <div style="display:flex; flex-direction:column; gap:4px;">
                         <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Bars Configuration</span>
-                        ${selectBarsHTML}
+                        ${inputBarsHTML}
                     </div>
                     <div style="display:flex; flex-direction:column; gap:4px;">
-                        <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Stirrups &amp; Shuttering</span>
-                        ${selectStirrupsHTML}
+                        <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Stirrups</span>
+                        <input type="text" class="styled-text-input pre-stirrups-s-input-${idx}" placeholder="e.g. 150mm c/c" value="${resolveLabel(PRE_STIRRUP_OPTS, config.stirrupsSpacing) || resolveLabel(PRE_STIRRUP_OPTS, config.stirrups).split(' - ')[0] || ''}" style="flex:1;">
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                        <span style="font-size:0.65rem; color:var(--text-400); font-weight:600; text-transform:uppercase;">Shuttering</span>
+                        <input type="text" class="styled-text-input pre-shuttering-input-${idx}" placeholder="e.g. Rigid (Standard) / Flexible" value="${config.shuttering || resolveLabel(PRE_STIRRUP_OPTS, config.stirrups).split(' - ')[1] || ''}" style="flex:1;">
                     </div>
                     <button class="fb-btn apply-pre-manual-btn-${idx}" style="margin-top:12px; padding:6px 12px; font-size:0.72rem; color:var(--indigo-600); border-color:rgba(99,102,241,0.3); background:#fff; align-self:start;">
                         Override AI Recommendations
@@ -1764,10 +1758,14 @@ function renderPreAnalysisList() {
 
         // Apply Manual Override
         photoCard.querySelector(`.apply-pre-manual-btn-${idx}`).addEventListener('click', () => {
-            config.coverBlocks = photoCard.querySelector(`.pre-cover-select-${idx}`).value;
-            config.reinfSpacing = photoCard.querySelector(`.pre-spacing-select-${idx}`).value;
-            config.bars = photoCard.querySelector(`.pre-bars-select-${idx}`).value;
-            config.stirrups = photoCard.querySelector(`.pre-stirrups-select-${idx}`).value;
+            config.coverBlocks = photoCard.querySelector(`.pre-cover-input-${idx}`).value.trim();
+            config.reinfSpacing = photoCard.querySelector(`.pre-spacing-input-${idx}`).value.trim();
+            config.bars = photoCard.querySelector(`.pre-bars-input-${idx}`).value.trim();
+            const stirrupsVal = photoCard.querySelector(`.pre-stirrups-s-input-${idx}`).value.trim();
+            const shutteringVal = photoCard.querySelector(`.pre-shuttering-input-${idx}`).value.trim();
+            config.stirrupsSpacing = stirrupsVal;
+            config.shuttering = shutteringVal;
+            config.stirrups = [stirrupsVal, shutteringVal].filter(Boolean).join(' - ');
             state.pre.selectionSource[idx] = 'manual';
             updateHighlight();
             renderPreAnalysisList(); // Re-render to update source badge
@@ -1780,6 +1778,9 @@ function renderPreAnalysisList() {
             config.reinfSpacing = rec.reinfSpacing;
             config.bars = rec.bars;
             config.stirrups = rec.stirrups;
+            // Clear any manual sub-fields so inputs repopulate from rec
+            delete config.stirrupsSpacing;
+            delete config.shuttering;
             state.pre.selectionSource[idx] = 'ai';
             updateHighlight();
             renderPreAnalysisList(); // Re-render to update source badge
@@ -1792,9 +1793,9 @@ function renderPreAnalysisList() {
 }
 
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // POST-CONSTRUCTION DIAGNOSTICS LOGIC (PHOTO-BY-PHOTO)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const postAnalysisList = $('postAnalysisList');
 const postAnalyzeBtn = $('postAnalyzeBtn');
 
@@ -1819,7 +1820,7 @@ function initPostRecommendations() {
     });
 }
 
-// No search input needed â€” single photo navigation
+// No search input needed Ã¢â‚¬â€ single photo navigation
 
 function renderPostAnalysisList() {
     postAnalysisList.innerHTML = '';
@@ -1852,27 +1853,10 @@ function renderPostAnalysisList() {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
 
-        const postDropdownKeys = [
-            "surface_voids_general",
-            "cold_joint_formwork",
-            "crack_shrinkage_thermal_crack",
-            "corrosion_lower_cover_rcc",
-            "flexural_crack_rcc",
-            "shear_crack_rcc",
-            "floor_settlement",
-            "plaster_spalling",
-            "seepage_damage_waterproofing",
-            "dry_dampness_rcc_with_corrosion",
-            "leakage_water_ingress_source",
-            "joint_crack_incompatible_material"
-        ];
         let selectHTML = `<select class="styled-select post-photo-select-${idx}" style="flex:1;">
             <option value="unassigned" ${assignedKey === 'unassigned' ? 'selected' : ''}>- Unassigned -</option>`;
-        for (const key of postDropdownKeys) {
-            const value = POST_DIAG[key];
-            if (value) {
-                selectHTML += `<option value="${key}" ${assignedKey === key ? 'selected' : ''}>${value.label}</option>`;
-            }
+        for (const [key, value] of Object.entries(POST_DIAG)) {
+            selectHTML += `<option value="${key}" ${assignedKey === key ? 'selected' : ''}>${value.label}</option>`;
         }
         selectHTML += `</select>`;
 
@@ -1922,7 +1906,7 @@ function renderPostAnalysisList() {
                 <div class="post-box-manual-${idx}" style="border:2px solid transparent; border-radius:var(--r-md); padding:14px; display:flex; flex-direction:column; justify-content:space-between; transition:all 0.2s ease-in-out; position:relative; background:#fff;">
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                            <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Defect Classification Manually</span>
+                            <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Select Defect Classification Manually</span>
                             <span class="post-badge-manual-${idx}" style="display:none;"></span>
                         </div>
                         <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
@@ -1988,9 +1972,9 @@ function renderPostAnalysisList() {
     });
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // FEEDBACK BUTTONS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 document.querySelectorAll('.fb-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const choice = btn.dataset.choice;
@@ -2116,10 +2100,10 @@ window.getPrePhotoCompareGridHTML = function(idx) {
                     <div class="cc-body" style="gap:8px; margin-top:16px;">
                         <h3 style="font-size:0.85rem; font-weight:800; margin-bottom:6px; border-bottom:none; padding-bottom:0;">AI Recommended Settings</h3>
                         <div class="cc-section" style="font-size:0.75rem; color:var(--text-700); line-height:1.4;">
-                            <strong>Cover Blocks:</strong> ${PRE_COVER_OPTS[rec.coverBlocks]}<br>
-                            <strong>Reinforcement Spacing:</strong> ${PRE_SPACING_OPTS[rec.reinfSpacing]}<br>
-                            <strong>Bars Configuration:</strong> ${PRE_BAR_OPTS[rec.bars]}<br>
-                            <strong>Stirrups & Shuttering:</strong> ${PRE_STIRRUP_OPTS[rec.stirrups]}
+                            <strong>Cover Blocks:</strong> ${resolveLabel(PRE_COVER_OPTS, rec.coverBlocks)}<br>
+                            <strong>Reinforcement Spacing:</strong> ${resolveLabel(PRE_SPACING_OPTS, rec.reinfSpacing)}<br>
+                            <strong>Bars Configuration:</strong> ${resolveLabel(PRE_BAR_OPTS, rec.bars)}<br>
+                            <strong>Stirrups & Shuttering:</strong> ${resolveLabel(PRE_STIRRUP_OPTS, rec.stirrups)}
                         </div>
                     </div>
                 </div>
@@ -2132,10 +2116,10 @@ window.getPrePhotoCompareGridHTML = function(idx) {
                     <div class="cc-body" style="gap:8px; margin-top:16px;">
                         <h3 style="font-size:0.85rem; font-weight:800; margin-bottom:6px; border-bottom:none; padding-bottom:0;">Manual Parameters</h3>
                         <div class="cc-section" style="font-size:0.75rem; color:var(--text-700); line-height:1.4;">
-                            <strong>Cover Blocks:</strong> ${PRE_COVER_OPTS[config.coverBlocks]}<br>
-                            <strong>Reinforcement Spacing:</strong> ${PRE_SPACING_OPTS[config.reinfSpacing]}<br>
-                            <strong>Bars Configuration:</strong> ${PRE_BAR_OPTS[config.bars]}<br>
-                            <strong>Stirrups & Shuttering:</strong> ${PRE_STIRRUP_OPTS[config.stirrups]}
+                            <strong>Cover Blocks:</strong> ${resolveLabel(PRE_COVER_OPTS, config.coverBlocks)}<br>
+                            <strong>Reinforcement Spacing:</strong> ${resolveLabel(PRE_SPACING_OPTS, config.reinfSpacing)}<br>
+                            <strong>Bars Configuration:</strong> ${resolveLabel(PRE_BAR_OPTS, config.bars)}<br>
+                            <strong>Stirrups & Shuttering:</strong> ${resolveLabel(PRE_STIRRUP_OPTS, config.stirrups)}
                         </div>
                     </div>
                 </div>
@@ -2266,9 +2250,9 @@ const rccPhotoObserver = new MutationObserver(() => {
 });
 rccPhotoObserver.observe($('rccPhotoGrid'), { childList: true });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // STEP 1 -> STEP 2 TRANSITION (IMAGE-BY-IMAGE CLASSIFICATION)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 const rccAnalysisList = $('rccAnalysisList');
 
 $('rccGoToAnalysisBtn').addEventListener('click', () => {
@@ -2292,7 +2276,7 @@ $('rccGoToAnalysisBtn').addEventListener('click', () => {
     renderRCCAnalysisList();
 });
 
-// No search input needed â€” single photo navigation
+// No search input needed Ã¢â‚¬â€ single photo navigation
 
 function renderRCCAnalysisList() {
     rccAnalysisList.innerHTML = '';
@@ -2325,62 +2309,10 @@ function renderRCCAnalysisList() {
             sourceBadgeHTML = `<span class="source-badge badge-manual" style="display:inline-flex; align-items:center; gap:4px; font-size:0.7rem; font-weight:800; color:#6366f1; background:rgba(99,102,241,0.08); padding:4px 10px; border-radius:var(--r-full); text-transform:uppercase;">Manual Interpretations</span>`;
         }
 
-        const rccDropdownKeys = [
-            "seepage_rcc_no_corrosion",
-            "seepage_rcc_with_corrosion",
-            "seepage_damage_waterproofing",
-            "dry_dampness_rcc_no_corrosion",
-            "dry_dampness_rcc_with_corrosion",
-            "dampness_capillary",
-            "leakage_water_ingress_source",
-            "waterlogging_leakage_improper_slope",
-            "vegetation_algae",
-            "chalking_peeling_crazing",
-            "alkali_silica_reactivity",
-            "re_wall_collapse",
-            "corrosion_minor",
-            "corrosion_along",
-            "corrosion_exposed",
-            "corrosion_spalling_rebar_exposed_moist",
-            "surface_voids_general",
-            "cold_joint_formwork",
-            "joint_crack_incompatible_material",
-            "crack_shrinkage_thermal_crack",
-            "efflorescence_salt_deposition_masonry",
-            "corrosion_lower_cover_rcc",
-            "sulphate_attack",
-            "flexural_crack_rcc",
-            "shear_crack_rcc",
-            "punching_crack_rcc",
-            "scouring",
-            "abrasion_cavitation_concrete_overlay",
-            "crack_stairstep_masonry",
-            "fire_black_fumed_no_blistering",
-            "fire_black_fumed_blistering",
-            "fire_pink_concrete_without_spalling",
-            "fire_pink_concrete_spalling",
-            "fire_deflected_distorted",
-            "paint_peel_off_steel",
-            "oxidation_steel_roofing_sheet",
-            "failure_expansion_joint",
-            "floor_settlement",
-            "scaling_peeling_off_metal",
-            "buckling_in_steel_member",
-            "loosening_bolt_steel_connections",
-            "plaster_spalling",
-            "missing_bolt_steel_connections",
-            "timber_termite_effect",
-            "crack_along_anchor_bolts_metal",
-            "crack_settlement_masonry",
-            "crack_in_plain_masonry"
-        ];
         let selectHTML = `<select class="styled-select rcc-photo-select-${idx}" style="flex:1;">
             <option value="unassigned" ${assignedKey === 'unassigned' ? 'selected' : ''}>- Unassigned -</option>`;
-        for (const key of rccDropdownKeys) {
-            const value = RCC_DIAG[key];
-            if (value) {
-                selectHTML += `<option value="${key}" ${assignedKey === key ? 'selected' : ''}>${value.label}</option>`;
-            }
+        for (const [key, value] of Object.entries(RCC_DIAG)) {
+            selectHTML += `<option value="${key}" ${assignedKey === key ? 'selected' : ''}>${value.label}</option>`;
         }
         selectHTML += `</select>`;
 
@@ -2430,7 +2362,7 @@ function renderRCCAnalysisList() {
                 <div class="rcc-box-manual-${idx}" style="border:2px solid transparent; border-radius:var(--r-md); padding:14px; display:flex; flex-direction:column; justify-content:space-between; transition:all 0.2s ease-in-out; position:relative; background:#fff;">
                     <div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                            <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Defect Classification Manually</span>
+                            <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--text-500); letter-spacing:0.05em;">Select Defect Classification Manually</span>
                             <span class="rcc-badge-manual-${idx}" style="display:none;"></span>
                         </div>
                         <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
@@ -2497,9 +2429,9 @@ function renderRCCAnalysisList() {
 }
 
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // PRE-CONSTRUCTION SOLUTIONS REPORT COMPILER
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 function getPrePhotoRiskKey(config) {
     if (!config) return "balanced_risk";
     const { coverBlocks, reinfSpacing, bars, stirrups } = config;
@@ -2538,64 +2470,119 @@ function renderPreSolutionsReport() {
     const reportList = $('preSolutionsReportList');
     reportList.innerHTML = '';
 
-    // Determine the risk key for each photo
     const assignedRiskKeys = state.pre.photos.map((_, idx) => getPrePhotoRiskKey(state.pre.imageAssignments[idx]));
     const activeRisks = Array.from(new Set(assignedRiskKeys));
+
+    const severityMeta = {
+        high:   { label: 'High Risk',   color: '#ef4444', bg: 'rgba(239,68,68,0.07)',   dot: '#ef4444' },
+        med:    { label: 'Medium Risk',  color: '#f59e0b', bg: 'rgba(245,158,11,0.07)',  dot: '#f59e0b' },
+        low:    { label: 'Low Risk',     color: '#10b981', bg: 'rgba(16,185,129,0.07)',  dot: '#10b981' }
+    };
 
     activeRisks.forEach(key => {
         const data = PRE_DIAG_DB[key];
         if (!data) return;
 
-        // Gather photos matching this risk category
-        let photosHTML = '';
-        let paramHTML = '';
+        const sv = severityMeta[data.severity] || severityMeta.med;
+        const categoryName = data.label;
+
+        // Count photos for this group
+        let photoCount = 0;
+        state.pre.photos.forEach((_, idx) => { if (assignedRiskKeys[idx] === key) photoCount++; });
+
+        // Build full-width horizontal photo+param cards
+        let cardsHTML = '';
         state.pre.photos.forEach((dataUrl, idx) => {
-            if (assignedRiskKeys[idx] === key) {
-                const config = state.pre.imageAssignments[idx] || { coverBlocks: '4_blocks', reinfSpacing: '150mm', bars: '16mm', stirrups: '150mm_rigid' };
-                const isAI = (state.pre.selectionSource[idx] === 'ai');
-                const badgeText = isAI ? 'AI Interpretation' : 'Manual';
-                const badgeColor = isAI ? '#0d9488' : '#6366f1';
-                const badgeBg = isAI ? 'rgba(20,184,166,0.1)' : 'rgba(99,102,241,0.08)';
+            if (assignedRiskKeys[idx] !== key) return;
 
-                photosHTML += `
-                    <div style="text-align:center; background:#f8fafc; border:1px solid var(--border); border-radius:var(--r-md); padding:8px; min-width:0;">
-                        <img src="${dataUrl}" class="img-zoomable" style="width:100%; height:80px; object-fit:cover; border-radius:var(--r-sm); border:1px solid var(--border-strong); display:block; cursor:zoom-in;" title="Photo ${idx + 1}">
-                        <div style="margin-top:6px; font-family:var(--font-head); font-weight:700; font-size:0.7rem; color:var(--text-900);">${idx + 1}</div>
-                        <span style="font-size:0.55rem; font-weight:700; color:${badgeColor}; background:${badgeBg}; padding:1px 6px; border-radius:var(--r-full); text-transform:uppercase;">${badgeText}</span>
+            const config = state.pre.imageAssignments[idx] || { coverBlocks: '4_blocks', reinfSpacing: '150mm', bars: '16mm', stirrups: '150mm_rigid' };
+            const isAI = (state.pre.selectionSource[idx] !== 'manual');
+            const badgeText  = isAI ? 'AI Interpretation' : 'Manual Interpretation';
+            const badgeColor = isAI ? '#0d9488' : '#6366f1';
+            const badgeBg    = isAI ? 'rgba(20,184,166,0.1)' : 'rgba(99,102,241,0.08)';
+            const accentColor = isAI ? '#0d9488' : '#6366f1';
+
+            const coverVal      = resolveLabel(PRE_COVER_OPTS,  config.coverBlocks)  || 'â€”';
+            const spacingVal    = resolveLabel(PRE_SPACING_OPTS, config.reinfSpacing) || 'â€”';
+            const barsVal       = resolveLabel(PRE_BAR_OPTS,     config.bars)         || 'â€”';
+            const stirrupsVal   = config.stirrupsSpacing || (resolveLabel(PRE_STIRRUP_OPTS, config.stirrups).split(' - ')[0]) || 'â€”';
+            const shutteringVal = config.shuttering      || (resolveLabel(PRE_STIRRUP_OPTS, config.stirrups).split(' - ')[1]) || 'â€”';
+
+            const makeParam = (icon, label, value, accent) => `
+                <div style="background:#fff; border:1.5px solid var(--border); border-radius:10px; padding:12px 14px; display:flex; flex-direction:column; gap:4px; position:relative; overflow:hidden;">
+                    <div style="position:absolute; top:0; left:0; width:3px; height:100%; background:${accent}; border-radius:10px 0 0 10px;"></div>
+                    <span style="font-size:0.58rem; font-weight:700; color:var(--text-400); text-transform:uppercase; letter-spacing:0.06em; padding-left:4px;">${label}</span>
+                    <span style="font-size:0.82rem; font-weight:600; color:var(--text-900); padding-left:4px; line-height:1.3;">${value}</span>
+                </div>`;
+
+            cardsHTML += `
+                <div style="background:#fff; border:1.5px solid var(--border); border-radius:14px; overflow:hidden; display:flex; align-items:stretch; margin-bottom:14px; box-shadow:0 1px 6px rgba(0,0,0,0.04); transition:box-shadow 0.2s;">
+                    <!-- Photo panel -->
+                    <div style="width:160px; flex-shrink:0; background:linear-gradient(160deg,#f8fafc 60%,${badgeBg}); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:18px 14px; border-right:1.5px solid var(--border); gap:10px;">
+                        <img src="${dataUrl}" class="img-zoomable" style="width:108px; height:108px; object-fit:cover; border-radius:10px; border:2px solid ${accentColor}; cursor:zoom-in; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+                        <div style="text-align:center;">
+                            <div style="font-family:var(--font-head); font-weight:800; font-size:0.88rem; color:var(--text-900);">Photo ${idx + 1}</div>
+                            <span style="display:inline-block; margin-top:4px; font-size:0.6rem; font-weight:800; color:${badgeColor}; background:${badgeBg}; padding:3px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:0.04em;">${badgeText}</span>
+                        </div>
                     </div>
-                `;
-
-            }
+                    <!-- Parameters grid -->
+                    <div style="flex:1; padding:18px 20px; display:flex; flex-direction:column; justify-content:center; gap:10px;">
+                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+                            ${makeParam('ðŸ“', 'Cover Blocks',          coverVal,      accentColor)}
+                            ${makeParam('ðŸ“', 'Reinforcement Spacing',  spacingVal,    accentColor)}
+                            ${makeParam('ðŸ”©', 'Bars Configuration',     barsVal,       accentColor)}
+                            ${makeParam('ðŸ”—', 'Stirrups',               stirrupsVal,   accentColor)}
+                            ${makeParam('ðŸ—',  'Shuttering',             shutteringVal, accentColor)}
+                        </div>
+                    </div>
+                </div>`;
         });
 
         const groupDiv = document.createElement('div');
-        groupDiv.className = 'rcc-solution-group';
-        groupDiv.style.padding = '24px';
-        groupDiv.style.marginBottom = '20px';
-        groupDiv.style.border = '1.5px solid var(--border)';
-        groupDiv.style.borderRadius = 'var(--r-xl)';
+        groupDiv.style.marginBottom = '24px';
+        groupDiv.style.border = `1.5px solid var(--border)`;
+        groupDiv.style.borderRadius = '16px';
         groupDiv.style.background = '#fff';
-
-        const severity = data.severity;
-        const categoryName = data.label;
+        groupDiv.style.overflow = 'hidden';
+        groupDiv.style.boxShadow = '0 2px 12px rgba(0,0,0,0.04)';
 
         groupDiv.innerHTML = `
-            <div class="rsg-header" style="border-bottom:1.5px solid var(--border); padding-bottom:10px; margin-bottom:16px;">
-                <span class="rsg-title" style="font-size:1.1rem; font-weight:800; font-family:var(--font-head); color:var(--text-900);">${categoryName}</span>
+            <!-- Group header -->
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; background:linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-bottom:1.5px solid var(--border);">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="width:8px; height:8px; border-radius:50%; background:var(--teal-500); flex-shrink:0;"></div>
+                    <div>
+                        <h3 style="margin:0; font-family:var(--font-head); font-weight:800; font-size:1rem; color:var(--text-900);">${categoryName}</h3>
+                        <span style="font-size:0.72rem; color:var(--text-400); font-weight:500;">${photoCount} photo${photoCount > 1 ? 's' : ''} in this category</span>
+                    </div>
+                </div>
+                <span style="font-size:0.65rem; font-weight:700; color:var(--text-500); background:#f1f5f9; border:1px solid var(--border-strong); padding:4px 12px; border-radius:20px; letter-spacing:0.04em; display:flex; align-items:center; gap:5px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Pre-Construction Analysis</span>
             </div>
 
-            <div style="margin-bottom:18px;">
-                <span style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:var(--text-400); display:block; margin-bottom:10px;">Evidence Photographs</span>
-                <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;">
-                    ${photosHTML}
+            <!-- Evidence Photographs strip -->
+            <div style="padding:16px 24px 0;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--text-400)" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <span style="font-size:0.68rem; font-weight:700; text-transform:uppercase; color:var(--text-400); letter-spacing:0.06em;">Evidence Photographs</span>
+                </div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+                    ${state.pre.photos.map((dataUrl, idx) => assignedRiskKeys[idx] !== key ? '' : `
+                        <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+                            <img src="${dataUrl}" class="img-zoomable" style="width:70px; height:70px; object-fit:cover; border-radius:8px; border:1.5px solid var(--border-strong); cursor:zoom-in; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+                            <span style="font-size:0.62rem; font-weight:700; color:var(--text-500);">#${idx + 1}</span>
+                        </div>`).join('')}
                 </div>
             </div>
 
-            <div style="margin-top:18px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                    <h4 style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-900); margin:0; letter-spacing:0.05em;">Conclusive Remarks</h4>
-                </div>
-                ${getMarketRateTableHTML('pre', key)}
+            <!-- Parameter Configuration header -->
+            <div style="display:flex; align-items:center; gap:8px; padding:0 24px 10px; border-top:1px solid var(--border); padding-top:16px; margin:0 24px; border-top:1.5px dashed var(--border);">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--text-400)" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <span style="font-size:0.68rem; font-weight:700; text-transform:uppercase; color:var(--text-400); letter-spacing:0.06em;">Parameter Configuration per Photo</span>
+            </div>
+
+            <!-- Photo parameter cards -->
+            <div style="padding:12px 24px 24px;">
+                ${cardsHTML}
             </div>
         `;
 
@@ -2640,13 +2627,13 @@ $('preRestartBtn').addEventListener('click', () => {
 });
 
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // POST-CONSTRUCTION SOLUTIONS REPORT COMPILER
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 postAnalyzeBtn.addEventListener('click', () => {
     postAnalyzeBtn.disabled = true;
     const btnText = postAnalyzeBtn.querySelector('.btn-text');
-    btnText.innerHTML = `<span class="spinner-dot"></span> Compiling diagnosticsâ€¦`;
+    btnText.innerHTML = `<span class="spinner-dot"></span> Compiling diagnosticsÃ¢â‚¬Â¦`;
 
     setTimeout(() => {
         renderPostSolutionsReport();
@@ -2801,9 +2788,9 @@ $('postRestartBtn').addEventListener('click', () => {
 });
 
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // RCC DAMAGE ANALYZER SOLUTIONS GENERATION
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 $('rccGenerateSolutionsBtn').addEventListener('click', () => {
     $('rccAnalysisCard').classList.add('hidden');
     $('rccResultsCard').classList.remove('hidden');
@@ -2943,9 +2930,9 @@ $('rccRestartBtn').addEventListener('click', () => {
     $('rccUploadCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // BACK BUTTONS CLICK HANDLERS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 // Pre-Construction Back Buttons
 const handlePreBack = () => {
     $('preUploadCard').classList.remove('hidden');
@@ -3157,7 +3144,7 @@ window.getRandomCrackNameMixture = function(defectKey) {
 // Progress Bar HTML Generator for Defect Combinations
 window.getDefectProgressBarsHTML = function(defectKey, isAI) {
     if (!isAI) {
-        // Manual detection — single purple bar at 100%
+        // Manual detection â€” single purple bar at 100%
         return `
             <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
                 <div style="font-family:var(--font-head); font-weight:800; font-size:0.65rem; text-transform:uppercase; color:#6366f1; letter-spacing:0.05em; margin-bottom:2px;">DEFECT PATTERN DETECTED MANUALLY BY EXPERT (PROBABILITY)</div>
@@ -3165,12 +3152,12 @@ window.getDefectProgressBarsHTML = function(defectKey, isAI) {
                     <div style="position:absolute; top:0; left:0; height:100%; width:100%; background:linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #6366f1 100%); border-radius:8px; transition:width 0.8s cubic-bezier(0.4,0,0.2,1);">
                         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 60%, rgba(0,0,0,0.1) 100%); border-radius:8px;"></div>
                     </div>
-                    <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:var(--font-head); font-weight:900; font-size:0.8rem; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.3); letter-spacing:0.04em; white-space:nowrap;">MANUAL EXPERT ASSESSMENT — 100%</span>
+                    <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:var(--font-head); font-weight:900; font-size:0.8rem; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.3); letter-spacing:0.04em; white-space:nowrap;">MANUAL EXPERT ASSESSMENT â€” 100%</span>
                 </div>
             </div>`;
     }
 
-    // AI detection — parse the mixture string to get two bars
+    // AI detection â€” parse the mixture string to get two bars
     const mixture = window.getRandomCrackNameMixture(defectKey);
     // Parse "60% corrosion and 40% spalling" format
     const match = mixture.match(/(\d+)%\s+(.+?)\s+and\s+(\d+)%\s+(.+)/i);
@@ -3275,16 +3262,24 @@ function initInterpretationSettingsPage() {
         console.error("Failed to load database overrides", e);
     }
 
+    // Helper: toggle between empty state and table
+    function showTableOrEmpty(hasContent) {
+        const emptyEl = document.getElementById('settingsEmptyState');
+        const container = document.getElementById('settingsDefectTableContainer');
+        if (emptyEl) emptyEl.style.display = hasContent ? 'none' : 'flex';
+        if (container) container.style.display = hasContent ? 'block' : 'none';
+    }
+
     // Populate dropdown with all defect types
     function populateDropdown() {
         if (!dropdown) return;
         const currentVal = dropdown.value;
-        // Clear existing options except the first "Show All"
-        while (dropdown.options.length > 1) dropdown.remove(1);
+        // Clear existing options except the first two (placeholder + Select All)
+        while (dropdown.options.length > 2) dropdown.remove(2);
         for (const [key, data] of Object.entries(POST_DIAG)) {
             const opt = document.createElement('option');
             opt.value = key;
-            opt.textContent = `${data.serialNumber || ''} — ${data.label}`;
+            opt.textContent = data.label;
             dropdown.appendChild(opt);
         }
         dropdown.value = currentVal || '';
@@ -3295,10 +3290,15 @@ function initInterpretationSettingsPage() {
     let selectedDropdownKey = '';
 
     const renderTable = (filter = '') => {
+        // Early exit: show empty state if nothing selected and no search
+        const hasSelection = selectedDropdownKey || (filter && filter.trim());
+        showTableOrEmpty(!!hasSelection);
+        if (!hasSelection) return;
+
         const entries = Object.entries(POST_DIAG);
 
-        // Apply dropdown filter first
-        let afterDropdown = selectedDropdownKey
+        // Apply dropdown filter first (__show_all__ means no filter)
+        let afterDropdown = (selectedDropdownKey && selectedDropdownKey !== '__show_all__')
             ? entries.filter(([k]) => k === selectedDropdownKey)
             : entries;
 
@@ -3307,7 +3307,6 @@ function initInterpretationSettingsPage() {
             ? afterDropdown.filter(([k, v]) => {
                 const q = filter.toLowerCase();
                 return (v.label && v.label.toLowerCase().includes(q))
-                    || (v.serialNumber && v.serialNumber.toLowerCase().includes(q))
                     || (v.rootCause && v.rootCause.toLowerCase().includes(q))
                     || (v.furtherInvestigation && v.furtherInvestigation.toLowerCase().includes(q))
                     || (v.futureSolution && v.futureSolution.toLowerCase().includes(q));
@@ -3321,9 +3320,6 @@ function initInterpretationSettingsPage() {
                 // Render inline edit mode for this row
                 rows += `
                     <tr style="background:#f0fdfa; border-bottom:1px solid var(--border);" data-key="${key}">
-                        <td style="padding:8px; border-right:1px solid var(--border); vertical-align:top; text-align:center; width:100px;">
-                            <input type="text" class="settings-edit-input" data-field="serialNumber" value="${data.serialNumber || ''}" style="width:100%; padding:6px; font-size:0.78rem; font-weight:700; border:1px solid var(--teal-300); border-radius:var(--r-md); text-align:center; outline:none; font-family:var(--font-body); background:#fff;">
-                        </td>
                         <td style="padding:8px; border-right:1px solid var(--border); vertical-align:top; min-width:180px;">
                             <input type="text" class="settings-edit-input" data-field="label" value="${data.label || ''}" style="width:100%; padding:6px; font-size:0.82rem; font-weight:700; border:1px solid var(--teal-300); border-radius:var(--r-md); color:var(--teal-700); outline:none; font-family:var(--font-body); background:#fff;">
                         </td>
@@ -3352,7 +3348,6 @@ function initInterpretationSettingsPage() {
                 // Normal view row
                 rows += `
                     <tr style="border-bottom:1px solid var(--border); transition:background 0.15s;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='#fff'" data-key="${key}">
-                        <td style="padding:10px 12px; border-right:1px solid var(--border); vertical-align:top; text-align:center; font-size:0.78rem; color:var(--text-900); font-weight:700; width:100px;">${data.serialNumber || rowNum}</td>
                         <td style="padding:10px 12px; border-right:1px solid var(--border); vertical-align:top; font-size:0.82rem; font-weight:700; color:var(--text-900); min-width:180px;">${data.label}</td>
                         <td style="padding:10px 12px; border-right:1px solid var(--border); vertical-align:top; font-size:0.78rem; color:var(--text-700); line-height:1.55; word-wrap:break-word; white-space:normal;">${data.rootCause || '<span style="color:var(--text-400); font-style:italic;">N/A</span>'}</td>
                         <td style="padding:10px 12px; border-right:1px solid var(--border); vertical-align:top; font-size:0.78rem; color:var(--text-700); line-height:1.55; word-wrap:break-word; white-space:normal;">${data.furtherInvestigation || '<span style="color:var(--text-400); font-style:italic;">N/A</span>'}</td>
@@ -3374,14 +3369,13 @@ function initInterpretationSettingsPage() {
         }
 
         if (filtered.length === 0) {
-            rows = `<tr><td colspan="6" style="padding:30px; text-align:center; color:var(--text-400); font-style:italic; font-size:0.85rem;">No defect patterns found.</td></tr>`;
+            rows = `<tr><td colspan="5" style="padding:30px; text-align:center; color:var(--text-400); font-style:italic; font-size:0.85rem;">No defect patterns found.</td></tr>`;
         }
 
         container.innerHTML = `
             <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.85rem;">
                 <thead>
                     <tr style="background:#f1f5f9; border-bottom:2px solid var(--border); color:var(--text-600); font-weight:800; text-transform:uppercase; font-size:0.68rem; letter-spacing:0.04em; position:sticky; top:0; z-index:2;">
-                        <th style="padding:12px 12px; border-right:1px solid var(--border); width:100px; text-align:center;">Serial Number</th>
                         <th style="padding:12px 12px; border-right:1px solid var(--border); min-width:180px;">Defect Pattern</th>
                         <th style="padding:12px 12px; border-right:1px solid var(--border);">Root Cause</th>
                         <th style="padding:12px 12px; border-right:1px solid var(--border);">Further Investigation</th>
@@ -3395,14 +3389,18 @@ function initInterpretationSettingsPage() {
             </table>
         `;
 
+        // Show table now that we have content
+        showTableOrEmpty(true);
+
         // Update live result count
         const resultCountEl = document.getElementById('settingsSearchResultCount');
         if (resultCountEl) {
+            resultCountEl.style.display = 'block';
             if (filter && filter.trim()) {
-                resultCountEl.style.display = 'block';
                 resultCountEl.innerHTML = `<span style="color:var(--teal-600);">${filtered.length}</span> of ${entries.length} defect patterns match "<span style="color:var(--teal-600); font-style:italic;">${filter}</span>"`;
+            } else if (filtered.length < entries.length) {
+                resultCountEl.innerHTML = `Showing <span style="color:var(--teal-600);">${filtered.length}</span> of ${entries.length} defect patterns`;
             } else {
-                resultCountEl.style.display = 'block';
                 resultCountEl.innerHTML = `Showing all <span style="color:var(--teal-600);">${entries.length}</span> defect patterns`;
             }
         }
@@ -3492,7 +3490,14 @@ function initInterpretationSettingsPage() {
     // Dropdown change event
     if (dropdown) {
         dropdown.addEventListener('change', (e) => {
-            selectedDropdownKey = e.target.value;
+            const val = e.target.value;
+            // __all__ means show everything
+            selectedDropdownKey = (val === '__all__') ? '' : val;
+            // If __all__ was picked, keep it visually selected but treat as no filter
+            if (val === '__all__') {
+                // show all entries
+                selectedDropdownKey = '__show_all__';
+            }
             editingKey = null;
             renderTable(searchInput ? searchInput.value : '');
         });
@@ -3540,15 +3545,12 @@ function openAddSettingsDefectModal(renderCallback) {
                 <button id="closeAddDefectModal" style="background:none; border:none; color:var(--text-400); cursor:pointer; font-size:1.5rem; display:flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; transition:background 0.2s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='none'">&times;</button>
             </div>
             <div style="padding:20px; display:flex; flex-direction:column; gap:16px; max-height:70vh; overflow-y:auto;">
-                <div style="display:flex; gap:12px;">
-                    <div style="display:flex; flex-direction:column; gap:6px; width:120px;">
-                        <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Serial Number</label>
-                        <input type="text" id="modalNewDefectSerial" placeholder="e.g. 16.4" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; transition:border-color 0.2s; font-family:var(--font-body);" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'">
-                    </div>
-                    <div style="display:flex; flex-direction:column; gap:6px; flex:1;">
-                        <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Defect Pattern Name</label>
-                        <input type="text" id="modalNewDefectLabel" placeholder="e.g. Plaster-Spalling-Masonry" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; transition:border-color 0.2s; font-family:var(--font-body);" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'">
-                    </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Defect Pattern Name</label>
+                    <select id="modalNewDefectLabel" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:var(--r-md); font-size:0.85rem; color:var(--text-800); outline:none; transition:border-color 0.2s; font-family:var(--font-body); cursor:pointer; appearance:none; background-color:#fff; background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%2394a3b8\" stroke-width=\"2.5\"><polyline points=\"6 9 12 15 18 9\"/></svg>'); background-repeat:no-repeat; background-position:right 12px center;" onfocus="this.style.borderColor='var(--teal-500)'" onblur="this.style.borderColor='var(--border)'">
+                        <option value="">— Select a Defect Pattern to Edit/Override —</option>
+                        ${Object.entries(POST_DIAG).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('')}
+                    </select>
                 </div>
                 <div style="display:flex; flex-direction:column; gap:6px;">
                     <label style="font-size:0.7rem; font-weight:800; color:var(--text-500); text-transform:uppercase;">Root Cause</label>
@@ -3577,38 +3579,47 @@ function openAddSettingsDefectModal(renderCallback) {
     modalDiv.querySelector('#cancelAddDefectModal').addEventListener('click', closeModal);
     modalDiv.addEventListener('click', (e) => { if (e.target === modalDiv) closeModal(); });
 
+    modalDiv.querySelector('#modalNewDefectLabel').addEventListener('change', (e) => {
+        const key = e.target.value;
+        if (key && POST_DIAG[key]) {
+            document.getElementById('modalNewDefectRootCause').value = POST_DIAG[key].rootCause !== 'N/A' ? POST_DIAG[key].rootCause : '';
+            document.getElementById('modalNewDefectFurtherInvestigation').value = POST_DIAG[key].furtherInvestigation !== 'N/A' ? POST_DIAG[key].furtherInvestigation : '';
+            document.getElementById('modalNewDefectFutureSolution').value = POST_DIAG[key].futureSolution !== 'N/A' ? POST_DIAG[key].futureSolution : '';
+        } else {
+            document.getElementById('modalNewDefectRootCause').value = '';
+            document.getElementById('modalNewDefectFurtherInvestigation').value = '';
+            document.getElementById('modalNewDefectFutureSolution').value = '';
+        }
+    });
+
     modalDiv.querySelector('#saveAddDefectModal').addEventListener('click', () => {
-        const serialNumber = document.getElementById('modalNewDefectSerial').value.trim();
-        const label = document.getElementById('modalNewDefectLabel').value.trim();
+        const key = document.getElementById('modalNewDefectLabel').value;
         const rootCause = document.getElementById('modalNewDefectRootCause').value.trim();
         const furtherInvestigation = document.getElementById('modalNewDefectFurtherInvestigation').value.trim();
         const futureSolution = document.getElementById('modalNewDefectFutureSolution').value.trim();
 
-        if (!label) {
-            showToast("Please enter a defect pattern name.");
+        if (!key) {
+            showToast("Please select a defect pattern.");
             return;
         }
 
-        const key = 'custom_' + label.toLowerCase().replace(/[^a-z0-9]+/g, '_');
-        const newDefect = {
-            serialNumber: serialNumber || String(Object.keys(POST_DIAG).length + 1),
-            label: label,
-            rootCause: rootCause || "N/A",
-            furtherInvestigation: furtherInvestigation || "N/A",
-            futureSolution: futureSolution || "N/A",
-            severity: "med",
-            A: { title: "Advanced Structural Retrofitting", match: 90, scope: "Localized treatment and standard repair procedures.", costDuration: "Moderate Cost | 2 Days" },
-            B: { title: "Cost-Effective Maintenance Repair", match: 75, scope: "Basic patch repairs and minor cosmetic finishing.", costDuration: "Low Cost | 1 Day" }
-        };
+        const label = POST_DIAG[key].label;
 
-        POST_DIAG[key] = newDefect;
+        POST_DIAG[key].rootCause = rootCause || "N/A";
+        POST_DIAG[key].furtherInvestigation = furtherInvestigation || "N/A";
+        POST_DIAG[key].futureSolution = futureSolution || "N/A";
 
         // Save to localStorage
         try {
-            let stored = localStorage.getItem('custom_settings_defects');
-            let customs = stored ? JSON.parse(stored) : {};
-            customs[key] = newDefect;
-            localStorage.setItem('custom_settings_defects', JSON.stringify(customs));
+            let stored = localStorage.getItem('settings_defect_overrides');
+            let overrides = stored ? JSON.parse(stored) : {};
+            overrides[key] = {
+                label: label,
+                rootCause: POST_DIAG[key].rootCause,
+                furtherInvestigation: POST_DIAG[key].furtherInvestigation,
+                futureSolution: POST_DIAG[key].futureSolution
+            };
+            localStorage.setItem('settings_defect_overrides', JSON.stringify(overrides));
         } catch (e) { console.error(e); }
 
         closeModal();
